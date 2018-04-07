@@ -107,5 +107,5 @@ object Server extends App {
         redirect("/graphql", PermanentRedirect)
       }
 
-  Http().bindAndHandle(route, "0.0.0.0", sys.props.get("http.port").fold(8080)(_.toInt))
+  Http().bindAndHandle(route, "0.0.0.0", sys.props.get("http.port").fold(9000)(_.toInt))
 }
